@@ -27,6 +27,19 @@ app.get("/api/notes", (request, response) => {
 	response.json(notes);
 });
 
+app.get("/api/notes/:id", (request, response) => {
+	// Type-casting the request.params.id to Number as it is a string in its natural state
+	const id = Number(request.params.id);
+	const note = notes.find((note) => note.id === id);
+
+	// Conditional to check if note exists, and to handle un-found notes accordingly
+	if (note) {
+		response.json(note);
+	} else {
+		response.status(404).end();
+	}
+});
+
 const PORT = 3001;
 
 app.listen(PORT, () => {
