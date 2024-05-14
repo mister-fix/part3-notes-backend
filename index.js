@@ -40,6 +40,13 @@ app.get("/api/notes/:id", (request, response) => {
 	}
 });
 
+app.delete("/api/nodes/:id", (request, response) => {
+	const id = Number(request.params.id);
+	notes.filter((note) => note.id !== id);
+
+	response.status(204).end();
+});
+
 const PORT = 3001;
 
 app.listen(PORT, () => {
