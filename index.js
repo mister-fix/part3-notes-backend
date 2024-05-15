@@ -40,7 +40,7 @@ app.get("/api/notes/:id", (request, response) => {
 	}
 });
 
-app.delete("/api/nodes/:id", (request, response) => {
+app.delete("/api/notes/:id", (request, response) => {
 	const id = Number(request.params.id);
 	notes.filter((note) => note.id !== id);
 
