@@ -1,6 +1,9 @@
 const express = require("express");
+const cors = require("cors");
 const app = express();
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
+
+app.use(express.static("dist"));
 
 const requestLogger = (request, response, next) => {
 	console.log("Method:", request.method);
@@ -28,6 +31,7 @@ let notes = [
 	},
 ];
 
+app.use(cors());
 app.use(express.json());
 app.use(requestLogger);
 
