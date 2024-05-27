@@ -21,7 +21,6 @@ export default [
 			"@stylistic/js/quotes": ["error", "single"],
 			"@stylistic/js/semi": ["error", "never"],
 			eqeqeq: "error",
-			"no-mixed-spaces-and-tabs": ["error", "smart-tabs"],
 			"no-trailing-spaces": "error",
 			"object-curly-spacing": ["error", "always"],
 			"arrow-spacing": [
