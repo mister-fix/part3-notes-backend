@@ -1,13 +1,18 @@
+import js from "@eslint/js";
 import globals from "globals";
 import stylisticJs from "@stylistic/eslint-plugin-js";
 
 export default [
-  { ignores: ["node_modules/**", "dist/**"] },
+  js.configs.recommended,
+  {
+    ignores: ["dist/**"],
+  },
   {
     files: ["**/*.js"],
     languageOptions: {
       sourceType: "commonjs",
       globals: {
+        ...globals.node,
         ...globals.browser,
       },
       ecmaVersion: "latest",
@@ -31,7 +36,7 @@ export default [
         },
       ],
       "no-mixed-spaces-and-tabs": ["error", "smart-tabs"],
-      "no-console": 0,
+      "no-console": "off",
     },
   },
   {
