@@ -18,4 +18,4 @@ You can interact with the backend here: [https://part3-notes-app-backend.fly.dev
 ### POST
 
 - Notes: [https://part3-notes-app-backend.fly.dev/api/notes](https://part3-notes-app-backend.fly.dev/api/notes)
-  - Posting to this endpoint will create a new note entry. Only registered users can do this. Both the name and number must be in the request body, there are error checks to make sure this is the case.  
+  - Posting to this endpoint will create a new note entry. Only registered users can do this. Both the name and number must be in the request body, there are error checks to make sure this is the case.
